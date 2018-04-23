@@ -3,6 +3,8 @@ kolor(zielony).
 kolor(niebieski).
 
 
+
+
 koloruj(Pl,B,U,S,Cz):-
 	kolor(Pl),kolor(B),Pl\=B,B\=Pl,
 	kolor(Pl),kolor(U),Pl\=U,U\=Pl,
@@ -17,4 +19,6 @@ koloruj(Pl,B,U,S,Cz):-
 	write('Czechy='),write(Cz),nl,
 	write('Ukraina='),write(U),nl,
 	nl,fail.
+
+
 	

@@ -1,5 +1,3 @@
-
-
 delta(A,B,C,Delta):-
 	Delta is B*B-4*A*C.
 
