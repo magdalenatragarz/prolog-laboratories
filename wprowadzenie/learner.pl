@@ -25,7 +25,6 @@ process_a_query :- write('State? '),
 
 answer(stop) :-    write('Saving the knowledge base...'),nl,
                    tell('learner_kb.pl'),
-                   write(':- dynamic(capital_of/2).'),nl,   % omit if not needed
                    listing(capital_of),
                    told,
                    write('Done.'),nl.

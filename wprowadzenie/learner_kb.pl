@@ -1,17 +1,12 @@
-% From the book
-% PROLOG PROGRAMMING IN DEPTH
-% by Michael A. Covington, Donald Nute, and Andre Vellino
-% (Prentice Hall, 1997).
-% Copyright 1997 Prentice-Hall, Inc.
-% For educational use only
+:- dynamic capital_of/2.
 
-% File CAPITALS.PL or KB.PL
-% Knowledge base for several examples in Chapter 2
-
-:- dynamic(capital_of/2).      % Remove if not needed. See text, section 2.8.
-
-capital_of(georgia,atlanta).
-capital_of(california,sacramento).
-capital_of(florida,tallahassee).
-capital_of(maine,augusta).
+capital_of(wawa, asas).
+capital_of(poland, warsaw).
+capital_of(georgia, atlanta).
+capital_of(california, sacramento).
+capital_of(florida, tallahassee).
+capital_of(maine, augusta).
+capital_of(wawa, asas).
+capital_of(poland, warsaw).
+capital_of(agag, asas).
 
