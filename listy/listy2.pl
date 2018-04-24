@@ -3,6 +3,15 @@ sklej([],X,X).
 sklej([X|L1],L2,[X|L3]) :-
 	sklej(L1,L2,L3).
 	
+odwroc([],[]).
+odwroc([H|T],L) :-
+	odwroc(T,R),
+	sklej(R,[H],L).
+	
+sklej_roznicowo(L - End, End, L).
+
+
+	
 %----------------------------%
 delete3last(L,L1) :-
 	sklej(L1,[_,_,_],L).
@@ -22,3 +31,36 @@ parzysta([_,_|T]) :-
 nieparzysta(L) :-
 	not(parzysta(L)).
 	
+palindrom(L) :-
+	odwroc(L,L1),
+	L=L1.
+	
+%---rotacyjne przecuniecie w lewo---%
+przesun([H|T],L) :-
+	sklej(T,[H],L).
+	
+	
+	
+%----------------------------%
+
+znaczy(0,zero).   
+znaczy(1,jeden).
+znaczy(2,dwa).    
+znaczy(3,trzy).
+znaczy(4,cztery). 
+znaczy(5,piec).
+znaczy(6,szesc).  
+znaczy(7,siedem).
+znaczy(8,osiem).  
+znaczy(9,dziewiec).
+
+
+przeloz([],[]) :-!.
+przeloz([H|T],L2) :-
+	znaczy(H,X),
+	przeloz(T,Z),
+	sklej([X],Z,U),
+	L2 = U.
+	
+
+
