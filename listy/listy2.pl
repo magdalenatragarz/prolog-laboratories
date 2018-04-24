@@ -62,5 +62,16 @@ przeloz([H|T],L2) :-
 	sklej([X],Z,U),
 	L2 = U.
 	
+	
+%----------------------------%
+
+nalezy(L,Z):-
+	sklej(_,[Z|_],L).
+	
+podzbior(_,[]).	
+podzbior(L,[H|T]):-
+	nalezy(L,H),
+	podzbior(L,T).
+	
 
 
