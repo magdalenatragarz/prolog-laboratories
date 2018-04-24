@@ -10,4 +10,5 @@ graniczy(francja, hiszpania).
 graniczy(wlochy, austria).
 graniczy(aaaaaaaa, aaa).
 graniczy(aafsdf, yyyyyy).
+graniczy(wawka, niemcy).
 
